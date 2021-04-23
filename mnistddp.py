@@ -31,7 +31,7 @@ class SmithNet(nn.Module):
         return x
     
 #main training loop
-def train(num_epochs=30, batch_size=256):
+def train(num_epochs=30, batch_size=128):
     #set up MINIST
     train_set = MNIST(root ='.', train=True, transform=transforms.Compose([transforms.ToTensor(),]) ,download=True)
     test_set = MNIST(root='.', train=False, download=True)
